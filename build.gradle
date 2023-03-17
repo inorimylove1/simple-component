@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'me.inorimylove'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    group = 'com.test'
+    version = '1.0-SNAPSHOT'
+    buildDir = 'target'
+    apply plugin: 'java'
+    apply plugin: 'war'
+    apply plugin: 'idea'
+    apply plugin: 'maven'
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+
+        providedCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.14'
+
+        compile('ch.qos.logback:logback-core:1.2.3')
+
+        compile('ch.qos.logback:logback-classic:1.2.3')
+
+        testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+
+    }
+
+}
+
+sourceCompatibility = 1.8
+

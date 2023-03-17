@@ -1,0 +1,5 @@
+rootProject.name = 'simple-component'
+rootProject.name = 'simple-component'
+rootProject.name = 'simple-component'
+include 'thread-pool'
+
